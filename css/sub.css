@@ -1,0 +1,426 @@
+@charset 'UTF-8';
+
+/* #ff592e */
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+#wrap {
+    width: 100%;
+    display: block;
+    min-width: 1020px;
+}
+
+
+
+/* 헤더 */
+#wrap header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 0;
+    /* 추가: 헤더를 화면 상단에 고정 */
+    z-index: 1000;
+    /* 추가: 헤더가 다른 요소들 위에 오도록 설정 */
+}
+
+#wrap header .headInner {
+    width: 1440px;
+    /* 수정: 헤더를 화면 상단에 고정 */
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 로고 */
+#wrap header .headInner h1.logo {
+    width: 200px;
+    height: 100px;
+}
+
+#wrap header .headInner h1.logo a img {
+    width: 150px;
+    margin: 35px 0 0 20px;
+    /* 수정: 로고의 좌측 마진을 줄여서 위치 조정 */
+}
+
+/* 상단메뉴 */
+#wrap header .headInner nav.menu {
+    width: 1240px;
+    /* 수정 */
+    height: 100px;
+    position: relative;
+}
+
+#wrap header .headInner nav.menu ul.mainmenu {
+    width: 100%;
+    /* 수정 */
+    justify-content: space-between;
+    /* 수정 */
+    height: 50px;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 25px;
+}
+
+#wrap header .headInner nav.menu ul.mainmenu li {
+    width: 20%;
+    /* 수정 */
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    /* 수정: 서브 메뉴를 포함하기 위해 위치 조정 */
+    z-index: 5;
+}
+
+#wrap header .headInner nav.menu ul.mainmenu li a {
+    display: block;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#wrap header .headInner nav.menu ul.mainmenu li h2 {
+    display: block;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    width: 90px;
+    height: 40px;
+    background-color: #ff592e;
+    border-radius: 30px;
+    color: #fff;
+    line-height: 40px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#wrap header .headInner nav.menu ul.mainmenu li h2:hover {
+    background-color: #ff6622;
+}
+
+#wrap header nav.menu ul.mainmenu li a:hover {
+    color: #ff592e;
+}
+
+/* 서브메뉴 */
+#wrap header .headInner nav.menu ul.mainmenu li .submenu {
+    position: absolute;
+    /* 수정: 서브 메뉴를 상위 메뉴 항목 바로 위에 배치 */
+    top: 100%;
+    /* 수정: 서브 메뉴를 상위 메뉴 항목 바로 아래로 배치 */
+    left: 0;
+    width: 100%;
+    /* 추가: 서브 메뉴 배경 색상 */
+
+    display: none;
+    z-index: 10;
+    /* 추가: 서브 메뉴가 다른 요소들 위에 오도록 설정 */
+}
+
+#wrap header .headInner nav.menu ul.mainmenu li .submenu ul {
+    padding: 0;
+    margin: 0;
+}
+
+#wrap header .headInner nav.menu ul.mainmenu li .submenu li {
+    width: 100%;
+}
+
+#wrap header .headInner nav.menu ul.mainmenu li .submenu li a {
+    font-size: 16px;
+    padding: 10px 20px;
+    /* 수정: 서브 메뉴 항목의 패딩을 추가하여 클릭 영역 확대 */
+    display: block;
+    color: #333;
+}
+
+#wrap header .headInner nav.menu ul.mainmenu li .submenu li a:hover {
+    color: #ff592e;
+}
+
+/* 배경 */
+#wrap header .headInner .bg {
+    width: 100%;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    right: 0;
+    top: 100px;
+    display: none;
+    z-index: 1;
+    /* 추가: 배경이 서브 메뉴와 겹치지 않도록 조정 */
+}
+
+
+/* 메인 */
+#wrap main {
+    width: 100%;
+    height: 1850px;
+    margin: 0 auto;
+    /* background-color: #ffa2a2; */
+    display: block;
+    margin-top: 100px;
+}
+
+#wrap main .menuinner {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    /* background-color: #94ee71; */
+    margin-top: 150px;
+    display: block;
+}
+
+#wrap main .menuinner .maintitle {
+    font-size: 80px;
+    /* border: #333 1px solid; */
+    text-align: center;
+    padding-top: 0px;
+}
+
+#wrap main .menuinner .maintitle span {
+    color: #ff592e;
+}
+
+#wrap main .menuinner .list {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    top: 150px;
+    gap: 50px;
+}
+
+#wrap main .menuinner .list li {
+    align-items: center;
+    display: grid;
+}
+
+#wrap main .menuinner .list li img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+#wrap main .menuinner .list li img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#wrap main .menuinner .list li img+a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+
+/* 푸터 */
+#wrap footer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    /* background-color: #a52424; */
+}
+
+#wrap footer .footerinner {
+    width: 80%;
+    height: 500px;
+    /* background-color: #2837b9; */
+    margin: 0 auto;
+    position: relative;
+}
+
+#wrap footer .footerinner .footmenu {
+    width: 100%;
+    height: 250px;
+    /* background-color: #50ff2d; */
+    border-bottom: solid 1px #ddd;
+    display: flex;
+}
+
+
+/* blogo */
+#wrap footer .footerinner .footmenu .blogo {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    line-height: 180px;
+}
+
+#wrap footer .footerinner img {
+    width: 200px;
+}
+
+/* bmenu */
+#wrap footer .footerinner .footmenu .bmenu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 250px;
+    margin-top: 30px;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+#wrap footer .footerinner .footmenu .bmenu li .bsub li a {
+    color: #777;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+#wrap footer .footerinner .footmenu .bmenu li .bsub li a:hover {
+    text-decoration: underline;
+}
+
+
+/* footer2 */
+#wrap footer .address {
+    width: 100%;
+    height: 250px;
+    /* background-color: #50ff2d; */
+    border-bottom: solid 1px #ddd;
+    display: flex;
+    position: relative;
+}
+
+
+/* 선택창 */
+#wrap footer .address .select {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    line-height: 180px;
+}
+
+#wrap footer .address .select select {
+    width: 200px;
+    height: 60px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    border: 0;
+    border-bottom: 1px solid #333;
+}
+
+#wrap footer .address .select select option {
+    font-size: 18px;
+}
+
+
+#wrap footer .address .link {
+    /* background-color: #973a3a; */
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+#wrap footer .address .link .ad {
+    position: absolute;
+    right: 100px;
+    text-align: center;
+    display: flex;
+    top: 50px;
+    width: 600px;
+}
+
+#wrap footer .address .link .ad strong {
+    color: #333;
+}
+
+#wrap footer .address .link .ad p {
+    color: #777;
+    position: absolute;
+    text-align: left;
+    font-size: 12px;
+}
+
+#wrap footer .address .direct {
+    display: flex;
+    /* background-color: #ff5f5f; */
+    top: 100px;
+    position: absolute;
+    width: 600px;
+    height: 80px;
+    right: 100px;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#wrap footer .address .direct .osi {
+    width: 180px;
+    height: 40px;
+    /* border-radius: 50%; */
+    background-color: #fff;
+    display: flex;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #777;
+}
+
+#wrap footer .address .direct .osi a img {
+    width: 25px;
+    padding-top: 10px;
+}
+
+#wrap footer .address .direct .osi a {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+#wrap footer .address .direct .google {
+    width: 180px;
+    height: 40px;
+    /* border-radius: 50%; */
+    background-color: #fff;
+    display: flex;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #777;
+}
+
+#wrap footer .address .direct .google a img {
+    width: 25px;
+    padding-top: 10px;
+}
+
+#wrap footer .address .direct .google a {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+#wrap footer .address .direct .qr img {
+    width: 100px;
+}
